@@ -8,12 +8,12 @@ import DestinationDetail from './pages/DestinationDetail';
 import Reservations from './pages/Reservations';
 
 function App() {
+  const basename = import.meta.env.BASE_URL;
   return (
     <BookingProvider>
-      <Router>
+      <Router basename={basename}>
         <div className="min-h-screen bg-slate-950">
           <Navbar />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/destinations" element={<Destinations />} />
