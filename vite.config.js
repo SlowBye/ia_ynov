@@ -2,8 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  base: '/ia_ynov/',
+// On utilise une fonction qui reçoit l'argument 'command'
+export default defineConfig(({ command }) => {
+  return {
+    plugins: [react(), tailwindcss()],
+    base: command === 'build' ? '/ia_ynov/' : '/',
+  }
 })

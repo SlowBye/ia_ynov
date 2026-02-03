@@ -7,7 +7,7 @@ const destinations = [
     title: "Paris 1889",
     era: "Belle Époque",
     description: "Vivez l'effervescence de l'Exposition Universelle. Admirez la Tour Eiffel à son inauguration, flânez sur les Champs-Élysées illuminés par les premières lumières électriques. Fer, vapeur et romantisme.",
-    image: "assets/img/paris_169.png",
+    image: "https://i.imgur.com/LcFOhMe.jpeg",
     price: "5,000"
   },
   {
@@ -15,7 +15,7 @@ const destinations = [
     title: "Crétacé",
     era: "Préhistoire",
     description: "Plongez 66 millions d'années en arrière, au cœur d'un monde sauvage et mystérieux. Observez les titans de la préhistoire dans leur habitat naturel. Une aventure primordiale et inoubliable.",
-    image: "assets/img/cretace_169.png",
+    image: "https://i.imgur.com/jQfYwBw.jpeg",
     price: "12,000"
   },
   {
@@ -23,7 +23,7 @@ const destinations = [
     title: "Florence 1504",
     era: "Renaissance",
     description: "Déambulez dans les ateliers des plus grands maîtres. Assistez à la révélation du David de Michel-Ange. Art, élégance et génie s'entremêlent dans la cité des Médicis.",
-    image: "assets/img/florence_169.png",
+    image: "https://i.imgur.com/D3pRtMk.jpeg",
     price: "7,500"
   }
 ];
@@ -56,7 +56,7 @@ export default function DestinationsGallery() {
               title={destination.title}
               era={destination.era}
               description={destination.description}
-              image={`${import.meta.env.BASE_URL}${destination.image}`}
+              image={destination.image}
               price={destination.price}
             />
           ))}
